@@ -1,35 +1,35 @@
 ## README COÑO
 # 🕳️ Proyecto de Detección de Huecos en las Vías
 
-¡Epa! Este proyecto lo armamos pa' detectar huecos en las calles usando visión por computador. Sí, de esos huecos que parecen piscinas olímpicas cuando llueve, que uno esquiva como si estuviera jugando Mario Kart.
+¡Qué más, chamo! Este proyecto es una herramienta hecha con cariño pa’ detectar huecos en las calles usando inteligencia artificial. Porque tú sabes cómo es, uno va por ahí manejando tranquilo y ¡pum! el carro cae en un hueco que parece la boca del Ávila.
 
-La idea es que el sistema vea una imagen o un video de una calle y te diga: "Mira, ahí hay un hueco". Todo eso gracias a modelos de inteligencia artificial que entrenamos con imágenes reales. Este proyecto es un granito de arena pa’ que en algún momento tengamos calles sin tantos tumbos.
-
----
-
-## 📌 ¿Y cómo funciona la cosa?
-
-Mira, te lo explico con calma:
-
-1. **Reunimos imágenes de huecos**: buscamos y tomamos fotos de calles con huecos (de aquí y de afuera).
-2. **Etiquetamos los huecos**: o sea, le decimos al sistema "esto que ves aquí es un hueco". Eso lo hacemos con programas como Roboflow o LabelImg.
-3. **Entrenamos un modelo inteligente**: usamos un modelo que ya viene pre-entrenado (como YOLOv5 o YOLOv8) y lo afinamos con nuestras imágenes pa’ que aprenda a reconocer huecos como los nuestros.
-4. **Probamos el modelo**: le pasamos imágenes nuevas y vemos si detecta bien los huecos.
-5. **Listo pa’ usar**: puedes correrlo en imágenes, videos o incluso conectarlo a una cámara y que te avise si ve un hueco en tiempo real.
-
-Todo esto lo hicimos en Python, y usamos herramientas como OpenCV y PyTorch/TensorFlow. El entrenamiento lo hicimos en Colab porque, bueno… las GPU no crecen en los árboles 😅
+Con este sistema, el objetivo es que una computadora o un teléfono vea una imagen de una calle y diga: “Epa chamo, ahí hay un hueco, pilas con eso”.
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## 📌 ¿Qué hace este proyecto, pues?
 
-- Python 🐍
-- OpenCV
-- YOLOv5 / YOLOv8 (según el modelo que uses)
-- Google Colab (pa’ aprovechar las GPU gratis)
-- NumPy, Pandas, Matplotlib (los panas de siempre)
+Bueno chamo, esto es más sencillo de lo que suena. Te explico como si estuviésemos echando cuentos en la acera:
+
+1. **Recolectamos imágenes** de huecos de calles de aquí y de allá.
+2. **Etiquetamos los huecos**: marcamos a mano dónde están los huecos pa’ que el modelo aprenda a reconocerlos.
+3. **Entrenamos un modelo de IA**: le enseñamos a un modelo (tipo YOLOv5 o YOLOv8) a que vea esas imágenes y diga "esto es un hueco, chamo".
+4. **Lo probamos** con imágenes nuevas pa’ ver si responde bien.
+5. **Listo pa’ la acción**: con eso ya puedes detectar huecos en fotos, videos, o en tiempo real si tienes una cámara montada en el carro.
+
+Así cualquier chamo que quiera ayudar a mejorar las calles puede hacerlo con esta herramienta. Tecnología al servicio del pueblo.
 
 ---
 
-## 📂 ¿Cómo está organizado el proyecto?
+## 🛠️ ¿Con qué hicimos esto?
+
+- **Python** (el pana que nunca falla)
+- **OpenCV** pa’ manipular imágenes
+- **YOLOv5 / YOLOv8** pa’ detectar huecos rapidito
+- **Google Colab** pa’ que el chamo que no tenga una buena compu pueda entrenar sin estrés
+- **NumPy, Matplotlib y Pandas**, los panas del análisis de datos
+
+---
+
+## 📂 ¿Cómo está organizado esto, chamo?
 
