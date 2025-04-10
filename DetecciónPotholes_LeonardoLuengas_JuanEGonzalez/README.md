@@ -19,6 +19,8 @@ Implementamos un modelo de Gaussian Mixture con dos componentes correspondientes
 |    accuracy    |          |          |   0.64   |    225|
 |   macro avg     |  0.64    |  0.63   |   0.63      | 225|
 |weighted avg     |  0.64    |  0.64    |  0.63     |  225|
+
+
 A continuación discutiremos a profundidad estos resultados.
 
 ## Desarrollo del Proyecto
