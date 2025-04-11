@@ -1,4 +1,4 @@
-# Reporte Parcial 2
+![image](https://github.com/user-attachments/assets/63e7e83d-749d-42b9-9144-1f466260d3bf)# Reporte Parcial 2
 Realizado por Juan Esteban Gonzalez y Leonardo Luengas para la clase de Introducción a la Visión por Computadora de la carrera de Matemáticas Aplicadas y Ciencias de la Computación.
 
 ## ⚠️IMPORTANTE⚠️
@@ -56,3 +56,5 @@ Realizamos una implementación de ``GridSearchCV()`` para optimizar los hiperpar
 
 
 ## Conclusiones
+
+El modelo tiene un buen desempeño para el objetivo de detectar huecos. Se hizo una prueba con una imágen que no había visto en el entrenamiento y la clasificó correctamente. Los resultados arrojados por ``GridSearchCV()`` nos desconciertan pero no sabemos exactamente que fue lo que ocurrió en el método para no encontrar el modelo más óptimo. Creemos que GMM no se presta muy bien para optimización de hiperparámetros. Incialmente, no tiene muchos hiperpárametros que optimizar más allá del numero de componentes, el cual ya estaba fijado al ser un problema de clasificación binaria.
