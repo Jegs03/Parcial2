@@ -42,6 +42,17 @@ Inicialmente, estos resultados son muy prometedores y la curva ROC resultante ju
 
 indica que tenemos un modelo que es más propenso a asignarle a una imágen la label de tener hueco. Esto es deseable dado que es más importante, considerando las aplicaciones industriales de este tipo de modelos en calles reales, detectar correctamemte los huecos más allá de asignar incorrectamente a calles en buenas condiciones el label de hueco. Es decir, es más seguro actuar como si la calle tuviera un hueco (reduciendo la velocidad, evadiendo, etc.) y, por lo tanto, la métrica de false positive rate no es tan relevante para nuestra aplicación. Por eso podemos tolerar un false positive rate alto, para maximizar la métrica de true positive en la curva ROC. A pesar de esto, podemos ver que el modelo tiene un buen desempeño para ambas clases, reflejado en un alto f1-score.
 
-Realizamos una implementación de ``GridSearchCV()`` para optimizar los hiperparámetros de ``covariance_type`` y ``reg_covar`` para mejorar el desempeño del modelo. Nuestro método de grid_search buscaba maximizar la métrica de f1 score pero realmente no encontró un modelo con mejor desempeño que el ya encontrado anteriormente. 
+Realizamos una implementación de ``GridSearchCV()`` para optimizar los hiperparámetros de ``covariance_type`` y ``reg_covar`` para mejorar el desempeño del modelo. Nuestro método de grid_search buscaba maximizar la métrica de f1 score pero realmente no encontró un modelo con mejor desempeño que el ya encontrado anteriormente. Las métricas encontradas son las siguientes con su respectiva curva ROC:
+
+|                |precision  |  recall | f1-score  | support|
+|----------------|----------|----------|-----------|--------|
+|          0    |   0.54  |    0.97  |    0.70  |     112|
+|           1    |   0.88   |   0.19   |   0.31     |  113|
+|    accuracy    |          |          |   0.58   |    225|
+|   macro avg     |  0.71    |  0.58   |   0.50      | 225|
+|weighted avg     |  0.71    |  0.58    |  0.50     |  225|
+
+![image](https://github.com/user-attachments/assets/5ba1f76a-a4b1-43a1-9809-ea416ef88387)
+
 
 ## Conclusiones
