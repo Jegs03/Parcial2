@@ -26,4 +26,7 @@ A continuación discutiremos a profundidad estos resultados.
 ## Desarrollo del Proyecto
 ### Pipeline de Preprocesamiento
 Nuestro pipeline de preprocesamiento consiste de 4 pasos.
-** hola
+1. ``DownScale()`` que se encarga de reducir el tamaño de todas las imágenes a 512x512 pixeles. Esto fue necesario dado que el tiempo de preprocesamiento para las imágenes con resolución original era demasiado largo y colapsaba la RAM del sistema.
+2. ``ToGrayscale()`` que le aplica a las imágenes un filtro de blanco y negro.
+3. ``GaussianBlur()`` que aplica un filtro gaussiano de kernle 5x5 y una desviación de 1. Encontramos que era necesario realizar este filtrado dado que la calle presentaba pequeñas irregularidades que hacían que el modelo no se enfocara en detectar el hueco. De esta forma, eliminamos el ruido dentro de la imágen sin eliminar los detalles importantes que queremos que el modelo identifique.
+4. ``ApplyCanny()`` que aplica un filtro de Canny a las imágenes. Nuestro razonamiento detrás fue pensar en que el modelo tenía que detectar solamente la presencia de la *silueta* de un hueco, olvidando el resto de los detalles que pueden estar presentes en la escena.
