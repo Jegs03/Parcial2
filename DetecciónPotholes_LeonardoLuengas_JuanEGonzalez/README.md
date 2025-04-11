@@ -11,17 +11,7 @@ recibe este archivo y no va a correr el resto del notebook hasta que se suban la
 ## Resumen del Proyecto
 Este proyecto busca entrenar un modelo de Aprendizaje No Supervizado en la detección de huecos en calles y carreteras. El objetivo del modelo es determinar si dentro de una imagen de una calle o una carretera hay algún tipo de hueco. Para esto utilizamos un dataset de 681 imágenes donde alrededor del 50% (329 imágenes) de las imágenes corresponden a calles con huecos y el resto de las imágenes (352 imágenes) corresponden a calles sin huecos. Este dataset se encuentra en la siguiente [URL](https://www.kaggle.com/datasets/atulyakumar98/pothole-detection-dataset).
 
-Implementamos un modelo de Gaussian Mixture con dos componentes correspondientes a cada clase del problema de detección de huecos. Después de optimizar los hiperparámetros del modelo, estos fueron los resultados:
-|                |precision  |  recall | f1-score  | support|
-|----------------|----------|----------|-----------|--------|
-|          0    |   0.69  |    0.75  |    0.72  |     112|
-|           1    |   0.73   |   0.66   |   0.69     |  113|
-|    accuracy    |          |          |   0.71   |    225|
-|   macro avg     |  0.71    |  0.71   |   0.71      | 225|
-|weighted avg     |  0.71    |  0.71    |  0.71     |  225|
-
-
-A continuación discutiremos a profundidad estos resultados.
+Implementamos un modelo de Gaussian Mixture con dos componentes correspondientes a cada clase del problema de detección de huecos. 
 
 ## Desarrollo del Proyecto
 ### Pipeline de Preprocesamiento
@@ -33,4 +23,20 @@ Nuestro pipeline de preprocesamiento consiste de 4 pasos.
 ### Pipeline de Feature Detection y Embedding
 Nuestro pipeline de Feature Detection y Embedding solo implementa el algoritmo de SIFT para extraer los descriptores de la escena y el algoritmo de Bag of Visual Words para generar un embedding de menor dimensión (10) que capture las características comunes de las imágenes.
 
-Para explorar este embedding utilizamos el algoritmo de PCA restrigindo a dos y tres componentes principales respectivamente para poder comprender la forma que tiene el embedding. N
+Para explorar este embedding utilizamos el algoritmo de PCA restrigindo a dos y tres componentes principales respectivamente para poder comprender la forma que tiene el embedding. Nos dimos cuenta que la mayoría de la varianza estaba en las primeras componentes. De esta forma redujimos el tamaño del bag of visual words a 10.
+### Resultados del Gaussian Mixture Model (GMM)
+Para evaluar el desempeño del modelo aprovechamos que el dataset dividia los tipos de imágenes y construimos un conjunto de labels verdaderos para todas las imágenes en el dataset. Asignamos el label de 0 para las imágenes en las que no hay huecos y 1 a las imágenes con huecos.
+
+Incialmente, corrimos un modelo sin ninguna optimización de hiperparámetros y nos dio la siguiente tabla de métricas.
+|                |precision  |  recall | f1-score  | support|
+|----------------|----------|----------|-----------|--------|
+|          0    |   0.69  |    0.75  |    0.72  |     112|
+|           1    |   0.73   |   0.66   |   0.69     |  113|
+|    accuracy    |          |          |   0.71   |    225|
+|   macro avg     |  0.71    |  0.71   |   0.71      | 225|
+|weighted avg     |  0.71    |  0.71    |  0.71     |  225|
+
+Inicialmente, estos resultados son muy prometedores y la curva ROC resultante nos arroja señales de que tenemos un modelo de clasificación bueno.
+
+![image](https://github.com/user-attachments/assets/1554b809-6f9d-42a3-9a4b-ee87c3b16055)
+
