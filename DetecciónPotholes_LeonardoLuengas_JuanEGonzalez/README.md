@@ -3,7 +3,7 @@ Realizado por Juan Esteban Gonzalez y Leonardo Luengas para la clase de Introduc
 
 ## ⚠️IMPORTANTE⚠️
 Para correr el notebook es **necesario** subir un archivo "kaggle.json" que tenga las credenciales de kaggle para poder usar la API y traer el dataset con el que vamos a trabajar. La segunda celda de código
-  ```
+  ```python
     from google.colab import files
     files.upload()
   ```
@@ -24,3 +24,6 @@ Implementamos un modelo de Gaussian Mixture con dos componentes correspondientes
 A continuación discutiremos a profundidad estos resultados.
 
 ## Desarrollo del Proyecto
+### Pipeline de Preprocesamiento
+Nuestro pipeline de preprocesamiento consiste de 4 pasos.
+** hola
