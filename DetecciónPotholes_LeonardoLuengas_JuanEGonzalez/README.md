@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/63e7e83d-749d-42b9-9144-1f466260d3bf)# Reporte Parcial 2
+# Reporte Parcial 2
 Realizado por Juan Esteban Gonzalez y Leonardo Luengas para la clase de Introducción a la Visión por Computadora de la carrera de Matemáticas Aplicadas y Ciencias de la Computación.
 
 ## ⚠️IMPORTANTE⚠️
