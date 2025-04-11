@@ -36,7 +36,8 @@ Incialmente, corrimos un modelo sin ninguna optimización de hiperparámetros y 
 |   macro avg     |  0.71    |  0.71   |   0.71      | 225|
 |weighted avg     |  0.71    |  0.71    |  0.71     |  225|
 
-Inicialmente, estos resultados son muy prometedores y la curva ROC resultante nos arroja señales de que tenemos un modelo de clasificación bueno.
+Inicialmente, estos resultados son muy prometedores y la curva ROC resultante junto a la métrica AUC
 
 ![image](https://github.com/user-attachments/assets/1554b809-6f9d-42a3-9a4b-ee87c3b16055)
 
+indica que tenemos un modelo que es más propenso a asignarle a una imágen la label de tener hueco. Esto es deseable dado que es más importante, considerando las aplicaciones industriales de este tipo de modelos en calles reales, detectar correctamemte los huecos más allá de asignar incorrectamente a calles en buenas condiciones el label de hueco. Es decir, es más seguro actuar como si la calle tuviera un hueco (reduciendo la velocidad, evadiendo, etc.) y, por lo tanto, la métrica de false positive rate no es tan relevante para nuestra aplicación. A pesar de esto, podemos ver que el modelo tiene un buen desempeño para ambas clases, reflejado en un alto f1-score.
